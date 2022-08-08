@@ -12,25 +12,126 @@
 </head>
 <body>
 
-  Bill
+  <section class="main-wrapper">
+    <div class="image">
+      <img class="logo" src="images/logo.svg" alt="">
+    </div>
+    
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <!-- Calculator -->
+    <section class="calc-wrapper">
 
-  Number of People
+      <!-- left section -->
+      <div class="calc-wrapper_left">
 
-  Tip Amount
-  / person
+        <!-- Bill -->
+        <div class="bill">
+          <div class="header">
+            <h4>Bill</h4>
+            <h4 class="error-text hide">f</h4>
+          </div>
+          <form action="">
+            <div class="input-control">
+              <input type="number" placeholder="0">
+              <span class="icon"><img src="images/icon-dollar.svg" alt=""></span>
+            </div>
+          </form>
+        </div>
+        <!-- End of Bill -->
 
-  Total
-  / person
+        <!-- TIP -->
+        <div class="tip">
+          <h4>Select Tip %</h4>
+          <div class="tips">
+            <button class="button">5%</button>
+            <button class="button">10%</button>
+            <button class="button">15%</button>
+            <button class="button">25%</button>
+            <button class="button">50%</button>
+            <input type="number" id="custom-tip" placeholder="Custom" class="custom">
+          </div>
+        </div>
+        <!-- End of Tip -->
 
-  Reset
+        <!-- Number of people -->
+        <div class="people">
+          <div class="header">
+            <h4>Number of People</h4>
+            <h4 class="error-text hide">f</h4>
+          </div>
+          
+          <form action="">
+            <div class="input-control">
+              <input type="number" id="people" placeholder="0">
+              <span class="icon"><img src="images/icon-person.svg" alt=""></span>
+              
+            </div>
+          </form>
+        </div>
+        <!-- End of N of People -->
+      </div>
+      <!-- End of Left container -->
+
+
+      <!-- Right Container -->
+      <div class="calc-wrapper_right">
+
+        <div class="top-container">
+          <!-- Tip-wrapper -->
+          <div class="tip-wrapper top-flexed">
+            <!-- Tip amount -->
+            <div class="left">
+              <h4>Tip Amount</h4>
+              <p>/ person</p>
+            </div>
+          
+
+            <!-- Display -->
+            <div class="right">
+              <h2 id="tip-display" class="tip-display">$0.00</h2>
+            </div>
+          </div>
+          <!-- End of tip wrapper -->
+
+          <!-- Total wrapper -->
+          <div class="total-wrapper top-flexed">
+            <div class="left">
+              <h4>Total</h4>
+              <p>/ person</p>
+            </div>
+
+            <div class="right">
+              <h2 id="total-display" class="tip-display">$0.00</h2>
+            </div>
+          </div>
+          <!-- End of total wrapper -->
+        </div>
+        <!-- End of Top container -->
+
+        <!-- Reset -->
+        <section class="bottom">
+          <button id="reset" class="reset">Reset</button>
+        </section>
+        
+      </div>
+      <!-- End of Right Container -->
+    </section>
+  </section>
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap'); 
+@import 'abstracts/variables';
+
+// reset
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+input, button{
+    font-family: 'Space Mono', monospace;
+}
+
+.hide{visibility: hidden;}
+
+body{
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+    background-color: $Light-grayish-cyan;
+    font-size: 1.5rem;
+}
+
+
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    // justify-content: center;
+    align-items: center;
+}
+
+.calc-wrapper{
+    background-color: $White;
+    border-radius: 2.5rem;
+    padding: 2rem;
+    margin: auto 2rem;
+    max-width: 40rem;
+
+    &_left{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .error-text{
+                color: red;
+                
+            }
+        }
+
+        h4{
+            color: $Dark-grayish-cyan;
+        }
+
+        form{
+            margin-top: 1rem;
+            // width: 100%;
+            .input-control{
+                position: relative;
+    
+
+                input{
+                    position: relative;
+                    width: 100%;
+                    padding: 0 2rem;
+                    height: 4rem;
+                    background-color: $Very-light-grayish-cyan;
+                    border: none;
+                    text-align: right;
+                    outline: none;
+                    border-radius: .5rem;
+                    font-weight: 700;
+                    font-size: 1.7rem;
+                    color: $Very-dark-cyan;
+
+                    &::placeholder{
+                        text-align: right;
+                        color: $Very-dark-cyan;
+                    }
+
+                    &:focus{
+                        outline: 2px solid $Strong-cyan;
+                        transition: 120ms ease-out;
+                    }
+                }
+
+               
+
+                .icon{
+                    position: absolute;
+                    top: 1rem;
+                    left: 2rem;
+
+                }
+            }
+        }
+
+        // Tip
+        .tip{
+            
+            .tips{
+                display: grid;
+                grid-template-columns: repeat(2, 15rem);
+                gap: 1rem;
+                margin-top: 1.5rem;
+                
+                button{
+                    border: none;
+                    background-color: $Very-dark-cyan;
+                    color: $White;
+                    padding: 1rem 0;
+                    border-radius: .5rem;
+                    font-size: 1.7rem;
+                    font-weight: 700;
+
+                    &:active, &:hover{
+                        background-color: $Strong-cyan;
+                        transition: background-color 150ms ease-in-out;
+                    }
+                }
+
+                .custom{
+                    font-weight: 700;
+                    font-size: 1.7rem;
+
+                    &::placeholder{
+                        text-align: center;
+                        
+                        color: $Grayish-cyan;
+                    }
+
+                    border: none;
+                    background-color: $Very-light-grayish-cyan;
+                    outline: none;
+                    text-align: right;
+                    padding-right: 1rem;
+                    border-radius: .5rem;
+
+                    &:focus{
+                        outline: 2px solid $Strong-cyan;
+                        transition: 120ms ease-out;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // Right
+    &_right{
+        background-color: $Very-dark-cyan;
+        margin-top: 4rem;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        
+        .top-container{
+            h4{color: $White;}
+            p{color: $Grayish-cyan;}
+            .tip-display{color: $Strong-cyan}
+
+
+            .tip-wrapper{
+                margin-bottom: 2rem;
+            }
+
+
+           .top-flexed{
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+           }
+        }
+
+        .bottom{
+            margin-top: 2rem;
+            button{
+                width: 100%;
+                padding: 1rem 0;
+                text-transform: uppercase;
+                border-radius: .5rem;
+                cursor: pointer;
+                outline: none;
+                border: none;
+                background-color: $Strong-cyan;
+                color: $Very-dark-cyan;
+
+            }
+        }
+    }
+}
+
+

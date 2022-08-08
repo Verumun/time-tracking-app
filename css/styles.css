@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+input, button {
+  font-family: 'Space Mono', monospace; }
+
+.hide {
+  visibility: hidden; }
+
+body {
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  height: 100vh;
+  background-color: #c5e4e7;
+  font-size: 1.5rem; }
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center; }
+
+.calc-wrapper {
+  background-color: white;
+  border-radius: 2.5rem;
+  padding: 2rem;
+  margin: auto 2rem;
+  max-width: 40rem; }
+  .calc-wrapper_left {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; }
+    .calc-wrapper_left .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .calc-wrapper_left .header .error-text {
+        color: red; }
+    .calc-wrapper_left h4 {
+      color: #5e7a7d; }
+    .calc-wrapper_left form {
+      margin-top: 1rem; }
+      .calc-wrapper_left form .input-control {
+        position: relative; }
+        .calc-wrapper_left form .input-control input {
+          position: relative;
+          width: 100%;
+          padding: 0 2rem;
+          height: 4rem;
+          background-color: #f4fafa;
+          border: none;
+          text-align: right;
+          outline: none;
+          border-radius: .5rem;
+          font-weight: 700;
+          font-size: 1.7rem;
+          color: #00494d; }
+          .calc-wrapper_left form .input-control input::placeholder {
+            text-align: right;
+            color: #00494d; }
+          .calc-wrapper_left form .input-control input:focus {
+            outline: 2px solid #26c0ab;
+            transition: 120ms ease-out; }
+        .calc-wrapper_left form .input-control .icon {
+          position: absolute;
+          top: 1rem;
+          left: 2rem; }
+    .calc-wrapper_left .tip .tips {
+      display: grid;
+      grid-template-columns: repeat(2, 15rem);
+      gap: 1rem;
+      margin-top: 1.5rem; }
+      .calc-wrapper_left .tip .tips button {
+        border: none;
+        background-color: #00494d;
+        color: white;
+        padding: 1rem 0;
+        border-radius: .5rem;
+        font-size: 1.7rem;
+        font-weight: 700; }
+        .calc-wrapper_left .tip .tips button:active, .calc-wrapper_left .tip .tips button:hover {
+          background-color: #26c0ab;
+          transition: background-color 150ms ease-in-out; }
+      .calc-wrapper_left .tip .tips .custom {
+        font-weight: 700;
+        font-size: 1.7rem;
+        border: none;
+        background-color: #f4fafa;
+        outline: none;
+        text-align: right;
+        padding-right: 1rem;
+        border-radius: .5rem; }
+        .calc-wrapper_left .tip .tips .custom::placeholder {
+          text-align: center;
+          color: #7f9c9f; }
+        .calc-wrapper_left .tip .tips .custom:focus {
+          outline: 2px solid #26c0ab;
+          transition: 120ms ease-out; }
+  .calc-wrapper_right {
+    background-color: #00494d;
+    margin-top: 4rem;
+    padding: 2rem;
+    border-radius: 1.5rem; }
+    .calc-wrapper_right .top-container h4 {
+      color: white; }
+    .calc-wrapper_right .top-container p {
+      color: #7f9c9f; }
+    .calc-wrapper_right .top-container .tip-display {
+      color: #26c0ab; }
+    .calc-wrapper_right .top-container .tip-wrapper {
+      margin-bottom: 2rem; }
+    .calc-wrapper_right .top-container .top-flexed {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .calc-wrapper_right .bottom {
+      margin-top: 2rem; }
+      .calc-wrapper_right .bottom button {
+        width: 100%;
+        padding: 1rem 0;
+        text-transform: uppercase;
+        border-radius: .5rem;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        background-color: #26c0ab;
+        color: #00494d; }
