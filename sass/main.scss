@@ -11,6 +11,8 @@ html{
     font-size: 62.5%;
 }
 
+
+
 input, button{
     font-family: 'Space Mono', monospace;
 }
@@ -26,6 +28,7 @@ body{
     height: 100vh;
     background-color: $Light-grayish-cyan;
     font-size: 1.5rem;
+    // overflow-x: scroll;
 }
 
 
@@ -87,7 +90,7 @@ body{
 
                     &::placeholder{
                         text-align: right;
-                        color: $Very-dark-cyan;
+                        color: $Grayish-cyan;
                     }
 
                     &:focus{
@@ -193,8 +196,10 @@ body{
                 cursor: pointer;
                 outline: none;
                 border: none;
-                background-color: $Strong-cyan;
+                background-color: hsl(183, 42%, 28%);
                 color: $Very-dark-cyan;
+
+                &:hover{background-color: $Strong-cyan;}
 
             }
         }
@@ -202,3 +207,40 @@ body{
 }
 
 
+
+@media screen and (min-width: 768px){
+    .calc-wrapper{
+        display: flex;
+        max-width: initial;
+        gap: 3rem;
+        padding: 3.5rem;
+
+        &_left{
+            
+            .tip{
+
+                .tips{
+                    grid-template-columns: repeat(3, 11rem);
+                }
+            }
+        }
+
+        &_right{
+            margin-top:initial;
+            
+            .top-container{
+                margin-top: 2rem;
+                // display: flex;
+
+                .top-flexed{
+                    // justify-content: initial;
+                    gap: 10rem;
+                }
+            }
+
+            .bottom{
+                margin-top: 13rem;
+            }
+        }
+    }
+}
