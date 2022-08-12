@@ -11,13 +11,20 @@ html{
     font-size: 62.5%;
 }
 
+.show{display: none;}
+
+.active{
+    background-color: $Strong-cyan; 
+    transition: background-color 150ms ease-in-out;
+}
+
 
 
 input, button{
     font-family: 'Space Mono', monospace;
 }
 
-.hide{visibility: hidden;}
+// .hide{visibility: hidden;}
 
 body{
     font-family: 'Space Mono', monospace;
@@ -44,7 +51,7 @@ body{
     background-color: $White;
     border-radius: 2.5rem;
     padding: 2rem;
-    margin: auto 2rem;
+    margin: auto;
     max-width: 40rem;
 
     &_left{
@@ -57,10 +64,14 @@ body{
             align-items: center;
             justify-content: space-between;
 
-            .error-text{
+            .error-text1, .error-text2{
                 color: red;
+                visibility: hidden;
+                // display: none;
                 
             }
+
+            
         }
 
         h4{
@@ -97,6 +108,11 @@ body{
                         outline: 2px solid $Strong-cyan;
                         transition: 120ms ease-out;
                     }
+
+                    &.error{
+                        // border:2px solid red;
+                        outline:2px solid red;
+                    }
                 }
 
                
@@ -128,6 +144,7 @@ body{
                     font-size: 1.7rem;
                     font-weight: 700;
 
+                    
                     &:active, &:hover{
                         background-color: $Strong-cyan;
                         transition: background-color 150ms ease-in-out;
